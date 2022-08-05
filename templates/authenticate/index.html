@@ -11,12 +11,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert" style="position: absolute;">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
     <!-- #### CREATE NAV SECTION AND SPLIT INTO COLUMNS #### -->
     
     <div class="white-bg">
         <div class="row">
             <div class="left-column">
-                <img style="background-color: #ffffff;" alt="logo" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Frame 2496.png">
+                <img style="background-color: #ffffff;" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png">
 
             </div>
             <div class="menu-column">
@@ -24,21 +32,22 @@
                     <ul>
                       <li><a class="active" href="/home">Home</a></li>
                       <li><a href="#">Deals</a></li>
-                      <li><a href="#contact">Categories</a></li>
-                      <li><a href="#about">Stores</a></li>
-                      <li><a href="#about">Price Tracker</a></li>
+                      <li><a href="#">Categories</a></li>
+                      <li><a href="#">Stores</a></li>
+                      <li><a href="#">Price Tracker</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="right-column">
-                <a class="button" href="#">Sign In</a>
+                <a class="button" href="/signin">Sign In</a>
             </div>
         </div>
          <!-- #### SEARCH FORM #### -->
         <div class="search">
                <div class="search-container">
-                    <form action="/action_page.php">
-                      <input type="text" placeholder="what are you searching for?" name="search"><button type="submit">search<i class="fa-solid fa-fa-search"></i></button>
+                    <form action="/search">
+                    {% csrf_token %}
+                      <input type="search" name="search" id="search" placeholder="what are you searching for?" name="search"><button type="submit">search<i class="fa-solid fa-fa-search"></i></button>
 
                     </form>
                 </div>
@@ -47,7 +56,7 @@
                 <div class="shopsmart">
                    <div class="txt">
                        <h1>SHOP SMART</h1>
-                       <p style="font-family: 'Poppins'; margin-left: -1100px; font-style: normal; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424;">Shop right at the<br> right price</p>
+                       <!-- <p style="font-family: 'Poppins'; margin-left: -1100px; font-style: normal; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424;">Shop right at the<br> right price</p>
                        <div class="right-column1">
                         <a class="button1" href="#" style="font-family: 'Poppins';
                         font-style: normal;
@@ -66,7 +75,7 @@
                        <img class="apple12" alt="Apple Iphone 12" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 5.png">
                        <h2 style="font-family: 'Poppins'; margin-left: 950px; margin-top: -200px; margin-bottom: 200px; font-style: normal; font-weight: 800; font-size: 48px; line-height: 102px; color: #222424;">Apple iPhone 12</h2>
                        <p style="font-family: 'Poppins'; font-style: normal; margin-left: 700px; margin-top: -200px; margin-bottom: 200px; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424">Say hello to 5G</p>
-                   </div>
+                   </div> -->
                 
                 <h1 style="font-family: 'Poppins';
                 font-style: normal;
@@ -94,12 +103,12 @@
                    <h4 class="price">₦181,000</h4>
                 </div>
        
-                <div class="tecno">
+                <!-- <div class="tecno">
                    <img class="tecnoc" alt="Tecno Camon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 12.png">
                    <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
                    <p class="gad">Tecno Camon 17p - Cg7<br>-Silver 6.8” ...</p>
                    <h4 class="price">₦112,000</h4>
-                </div>
+                </div> -->
                 <h4 class="see1" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
        
                 <h1 style="font-family: 'Poppins';
@@ -128,12 +137,12 @@
                    <h4 class="price">₦370,000</h4>
                 </div>
        
-                <div class="hp">
+                <!-- <div class="hp">
                    <img class="hplaptop" alt="HP Spectre" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 44.png">
                    <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
                    <p class="gad1">Hp SPECTRE 15 X360 11TH GEN CORE I7,1TB <br>SSD,16GB RAM,4K <br>DISPLAY,TOUCH,BACKLIT,WIN 10 PRO <br>SPECTRE 15T 11TH GEN</p>
                    <h4 class="price">₦840,000</h4>
-                </div>
+                </div> -->
                 <h4 class="see2" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
 
 
@@ -163,16 +172,16 @@
                    <h4 class="price">₦670,000</h4>
                 </div>
        
-                <div class="iphonexs">
+                <!-- <div class="iphonexs">
                    <img class="iphxs" alt="iPhone XS Max" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 17.png">
                    <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
                    <p class="gad">Apple IPhone Xs Max - 6.5” - <br>512 ...</p>
                    <h4 class="price">₦380,000</h4>
-                </div>
+                </div> -->
                 <h4 class="see3" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
                 
 
-                <h1 style="font-family: 'Poppins';
+                <!-- <h1 style="font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 700;
                 font-size: 50.7226px;
@@ -218,7 +227,7 @@
                      <input type="text" placeholder="Your email" name="search2">
                      <button type="submit">Subscribe</button>
                    </form>
-               </div> 
+               </div>  -->
          <!--  #### CREATE FOOTER ####  -->
          <footer class="footer-col">
             <div>
@@ -244,7 +253,6 @@
                 About us<br>
                 Team<br>
                 Merchant sign up<br>
-                User Guide<br>
                 User Guide
             </div>
             <div>
@@ -260,5 +268,760 @@
             </div>
         </footer>
     </div>
+    <style>
+        body{
+
+
+        background: #ffffff;
+        }
+
+
+        .white-bg {
+        background-color: #ffffff;
+        width: 70%;
+        margin: auto;
+        padding: 20px;
+        }
+        
+        /*### CREATE FLEX NAV ROW ###*/
+        .row {  
+        display: flex;
+        flex-flow: row wrap;
+        }
+
+        /* Create three menu columns that sits next to each other */
+        /* Left column */
+        .left-column {
+        flex: 10%;
+        background-color: #ffffff;
+        }
+
+        /* Menu column */
+        .menu-column {
+        flex: 70%;
+        background-color: #ffffff;
+        }
+
+        /* Right column */
+        .right-column {
+        flex: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        }
+
+        .right-column1 {
+        flex: 10%;
+            display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        margin-left: -1100px;
+        margin-top: 100px;
+        
+        }
+
+        nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        }
+
+        li a {
+        display: block;
+        color: #000;
+        font-size: 12px;
+        padding: 5px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        }
+
+        li a:hover {
+        color: #ddd;
+        }
+
+        
+        /*###  STYLE NAV SIGN-IN BUTTON  ###*/
+        a.button:link, a.button:visited {
+        background-color: #053573;
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        }
+
+        a.button1:link, a.button1:visited {
+        
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        width: 291px;
+        height: 60px;
+
+        background: #053674;
+        border-radius: 4px;
+        }
+
+        .search {
+        background-color: #ffffff;
+        }
+        .search .search-container {
+        float: right;
+        }
+
+        .search:after {
+        display: table;
+        content: "";
+        clear: both;
+        }
+        
+        .search input[type=text] {
+        padding: 9px 150px 9px 5px;
+        margin-top: 12px;
+        font-size: 20px;
+        margin-right: 0px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid black;
+        }
+
+        ::placeholder {
+        font-size: 12px;
+        }    
+
+        .search .search-container button {
+        padding: 15px 25px;
+        margin-top: 8px;
+        background: #F6cc5c;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12px 9px 12px 20px;
+        gap: 16px;
+
+        width: 126px;
+        height: 48px;
+
+
+        background: rgba(246, 204, 92, 0.75);
+        border-radius: 0px 5px 5px 0px;
+        font-size: 11px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        cursor: pointer;
+        color: black;
+        }
+
+        .apple12 {
+        margin-left: 600px;
+        margin-top: -200px;
+        }
+
+        .applebg {
+        position: relative;
+        width: 171px;
+        height: 159px;
+        left: 279px;
+        top: 0px;
+        
+
+        background: #ffffff;
+        border-radius: 50%;
+        }
+
+        .nokiabg {
+        position: relative;
+        width: 171px;
+        height: 159px;
+        left: 279px;
+        top: 0px;
+        
+
+        background: #ffffff;
+        border-radius: 50%;
+        }
+
+        .samsungbg {
+        position: relative;
+        width: 171px;
+        height: 159px;
+        left: 279px;
+        top: 0px;
+        
+
+        background: #ffffff;
+        border-radius: 50%;
+        }
+
+        .infinixbg {
+        position: relative;
+        width: 171px;
+        height: 159px;
+        left: 279px;
+        top: 0px;
+        
+
+        background: #ffffff;
+        border-radius: 50%;
+        }
+        .gad1 {
+        width: 335px;
+        height: 80px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        }
+        .tecnobg {
+        position: relative;
+        width: 171px;
+        height: 159px;
+        left: 279px;
+        top: 0px;
+        
+
+        background: #ffffff;
+        border-radius: 50%;
+        }
+        
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 16px 48px;
+        gap: 16px;
+
+        position: absolute;
+        width: 1440px;
+        height: 181.28px;
+        left: 0px;
+        top: 0.5px;
+
+        background: #FFFFFF;
+        /* Nav shadow */
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo{
+            position: relative;
+        max-width: 40px;
+            max-height: 40px;
+            /* left: -100px; */
+        }
+        .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 1px 0px 0px;
+        gap: 136px;
+        
+        width: 1257px;
+        height: 83.28px;
+        ;
+        }
+        /* for the user in the nav*/
+        .user{
+            position: relative;
+            /* right: -30px; */
+            display: flex;
+            justify-content: space-around;
+        }
+        .user button{
+            background-color: black;
+            width: 150px;
+            color: white;
+            position: relative;
+            padding: 5px;
+            border-radius: 4px;
+            /* right: -90px; */
+        }
+        .usr{
+            position: relative;
+            right: 15px;
+            background-color: gray;
+            max-width: 20px;
+            max-height: 20px;
+        }
+        .headers{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 60px;
+        
+        width: 668px;
+        height: 28px;
+        
+        }
+        /* list items and link for nav */
+        ul{
+            position: relative;
+            top: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            list-style: none;
+            text-decoration: none;
+            padding: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            
+        }
+        .new{
+            float: left;
+            position: relative;
+            left: 760px;
+            top: 5px;
+            /* right: -49px; */
+            
+        }
+        .new button{
+            background-color: black;
+            color: white;
+            border-radius: 0;
+            width: 100px;
+            padding: 8px;
+            
+        
+        }
+        .new span{
+            position: relative;
+            right: -10px;
+        }
+        .new input{
+            position: relative;
+            left: -10px;
+            width: 600px;
+            padding: 6px;
+            
+        }
+        
+        /* footer */
+        #footer{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid gray;
+        }
+        #footer ul{
+            display: block;
+        }
+        
+        /* footer */
+        .foot{
+            position: relative;
+            bottom: 0;
+            text-align: center;
+            /* margin-top: 30px; */
+        
+            /* background-color: yellowgreen; */
+        }
+        
+        /* body */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif ;
+            line-height: 1.5em;
+            background-color: #ffffff;
+        }
+
+        .nav-navbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 1px 0px 0px;
+        gap: 136px;
+
+        width: 1257px;
+        height: 83.28px;
+
+        background: #FFFFFF;
+        /* Nav shadow */
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .txt h1 {
+        font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 68px;
+                            line-height: 102px;
+                            
+                            
+                            width: 477px;
+                            height: 102px;
+                            color: #222424;
+                            
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            position: relative;
+                            margin-top: 200px;
+        }
+        .update {
+            width: 1452px;
+            height: 268px;
+            margin: auto;
+            background-color: #FFF4D6;
+            }
+        
+            
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            width: 550px;
+        height: 50px;
+
+        background: #FFFFFF;
+        border-radius: 0px;
+        margin-left: 200px;
+            float: left;
+            width: 60%;
+            background: #ffffff;
+            margin-right: 5px;
+        }
+        
+        form.example button {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            width: 200px;
+        height: 50px;
+
+        background: #053674;
+        border: 2px solid #D9D9D9;
+        border-radius: 0px;
+
+            
+            color: white;
+            font-size: 17px;
+            
+        
+            cursor: pointer;
+        }
+
+        .boxcompare button{
+            box-sizing: border-box;
+            display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 60px;
+        gap: 10px;
+
+        width: 291px;
+        height: 60px;
+
+        background: #053674;
+        border-radius: 4px;
+        cursor: pointer;
+
+        }
+
+        .boxcompare button:hover {
+            background: #0b7dda;
+        }
+
+        .price {
+            font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32.7243px;
+        line-height: 41px;
+        /* identical to box height, or 125% */
+
+
+        /* Dark Blue/Main Primary color */
+
+        color: #053674;
+        }
+
+        .gad {
+            width: 322.3px;
+        height: 58px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20.4527px;
+        line-height: 29px;
+        /* or 140% */
+
+
+        color: #222424;
+        }
+
+        .gad {
+        background-color: #ffffff;
+        }
+
+        .price {
+        background-color: #ffffff;
+        }
+
+        .like {
+            margin-top: 300px;
+            position: relative;
+        }
+
+        .nokia {
+        margin-left: 80px;
+        }
+
+        .infinixz {
+        margin-left: 80px;
+        }
+
+        .tecnoc {
+        margin-left: 80px;
+        }
+
+        .mac {
+        margin-left: 80px;
+        }
+
+        .applew {
+        margin-left: 80px;
+        }
+
+        .hplaptop {
+        margin-left: 80px;
+        }
+
+        .ip13 {
+        margin-left: 80px;
+        }
+
+        .sam {
+        margin-left: 80px;
+        }
+
+        .iphxs {
+        margin-left: 80px;
+        }
+
+        
+        .see {
+        position: relative;
+        width: 127px;
+        height: 28px;
+        left: calc(50% - 127px/2);
+        top: 587.69px;
+
+        /* Button */
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        /* identical to box height, or 140% */
+
+        text-align: center;
+
+        color: #222424;
+        }
+
+        .brands {
+        background-color: #E5EBF3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        gap: 17px;
+
+        width: 1433px;
+        height: 443.65px;
+        justify-content: center;
+
+        }
+
+
+
+        .nokiac330 {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 5px;
+        }
+
+        .infinixzero {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 580px;
+        margin-top: -452px;
+        margin-bottom: 52px;
+        }
+
+        .tecno {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 1150px;
+        margin-top: -505px;
+        margin-bottom: 200px;
+        }
+
+        .macbook {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 5px;
+        }
+
+        .applewatch {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 580px;
+        margin-top: -452px;
+        margin-bottom: 52px;
+        }
+
+        .hp {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 1150px;
+        margin-top: -505px;
+        margin-bottom: 200px;
+        }
+
+        .iphone13 {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 5px;
+        }
+
+        .samsung {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 580px;
+        margin-top: -452px;
+        margin-bottom: 52px;
+        }
+
+        .iphonexs {
+            
+            width: 383.59px;
+        height: 453.33px;
+
+        background: #FFFFFF;
+        border: 1.05672px solid #CFCECE;
+        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
+        border-radius: 8.45377px;
+        margin-left: 1150px;
+        margin-top: -505px;
+        margin-bottom: 200px;
+        }
+
+        
+        
+        form.example button:hover {   
+            background: #0b7dda;
+        }
+        
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .footer-col {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 7rem;
+        justify-content: center;
+        margin-top: 100px;
+        font-size: 12.5px;
+        background-color: #ffffff;
+        }
+
+        .last-row {
+        border-top:1px solid #000;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 12px;
+        background-color: #ffffff;
+        }
+
+        /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .row {  
+        display: flex;
+        flex-flow: column;
+        }
+        .search .search-container {
+        float: none;
+        }
+        .search input[type=text] {
+        padding: 9px 50px 9px 10px;
+        }
+
+        }
+    </style>
 </body>
 </html>
