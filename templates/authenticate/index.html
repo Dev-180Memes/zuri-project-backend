@@ -1,32 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartShop</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b20a86ad5.js" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- #### CREATE NAV SECTION AND SPLIT INTO COLUMNS #### -->
+    
+    <div class="white-bg">
+        <div class="row">
+            <div class="left-column">
+                <img style="background-color: #ffffff;" alt="logo" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Frame 2496.png">
 
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+            </div>
+            <div class="menu-column">
+                <nav style="background-color:#ffffff;">
+                    <ul>
+                      <li><a class="active" href="/home">Home</a></li>
+                      <li><a href="#">Deals</a></li>
+                      <li><a href="#contact">Categories</a></li>
+                      <li><a href="#about">Stores</a></li>
+                      <li><a href="#about">Price Tracker</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-column">
+                <a class="button" href="#">Sign In</a>
+            </div>
+        </div>
+         <!-- #### SEARCH FORM #### -->
+        <div class="search">
+               <div class="search-container">
+                    <form action="/action_page.php">
+                      <input type="text" placeholder="what are you searching for?" name="search"><button type="submit">search<i class="fa-solid fa-fa-search"></i></button>
+
+                    </form>
+                </div>
+        </div>
+                <!-- #### CONTENT SECTION #### -->
+                <div class="shopsmart">
+                   <div class="txt">
+                       <h1>SHOP SMART</h1>
+                       <p style="font-family: 'Poppins'; margin-left: -1100px; font-style: normal; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424;">Shop right at the<br> right price</p>
+                       <div class="right-column1">
+                        <a class="button1" href="#" style="font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 28px;
+                        /* identical to box height, or 140% */
+                        
+                        display: flex;
+                        align-items: center;
+                        
+                        color: #FFFFFF;
+                        ">COMPARE PRICES</a></div>
+                   </div>
+                   <div class="apple">
+                       <img class="apple12" alt="Apple Iphone 12" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 5.png">
+                       <h2 style="font-family: 'Poppins'; margin-left: 950px; margin-top: -200px; margin-bottom: 200px; font-style: normal; font-weight: 800; font-size: 48px; line-height: 102px; color: #222424;">Apple iPhone 12</h2>
+                       <p style="font-family: 'Poppins'; font-style: normal; margin-left: 700px; margin-top: -200px; margin-bottom: 200px; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424">Say hello to 5G</p>
+                   </div>
+                
+                <h1 style="font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50.7226px;
+                line-height: 76px;
+                /* or 150% */
+                
+                text-align: center;
+                text-transform: uppercase;
+                
+                color: #222424">POPULAR SEARCH</h1>
+       
+                <div class="nokiac330">
+                   <img class="nokia" alt="nokiac30" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\nokia-c30-1 1.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Nokia C30 - 6.82” HD+ <br>- 3gb Ram</p>
+                   <h4 class="price">₦81,000</h4>
+                </div>
+       
+                <div class="infinixzero">
+                   <img class="infinixz" alt="Infinix Zero x" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Frame 2356.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Infinix Zero X Pro - X6811 - <br>6.67 ...</p>
+                   <h4 class="price">₦181,000</h4>
+                </div>
+       
+                <div class="tecno">
+                   <img class="tecnoc" alt="Tecno Camon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 12.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Tecno Camon 17p - Cg7<br>-Silver 6.8” ...</p>
+                   <h4 class="price">₦112,000</h4>
+                </div>
+                <h4 class="see1" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
+       
+                <h1 style="font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50.7226px;
+                line-height: 76px;
+                /* or 150% */
+                
+                text-align: center;
+                text-transform: uppercase;
+                
+                color: #222424">TOP DEALS</h1>
+       
+                <div class="macbook">
+                   <img class="mac" alt="Apple Macbook" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\macbook pro 13 2.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Apple Macbook Pro 13.3” <br>(2020 ...</p>
+                   <h4 class="price">₦2,900,000</h4>
+                </div>
+       
+                <div class="applewatch">
+                   <img class="applew" alt="Apple Watch" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 13.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Apple Watch Nike Series 6 - Gps ...</p>
+                   <h4 class="price">₦370,000</h4>
+                </div>
+       
+                <div class="hp">
+                   <img class="hplaptop" alt="HP Spectre" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 44.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad1">Hp SPECTRE 15 X360 11TH GEN CORE I7,1TB <br>SSD,16GB RAM,4K <br>DISPLAY,TOUCH,BACKLIT,WIN 10 PRO <br>SPECTRE 15T 11TH GEN</p>
+                   <h4 class="price">₦840,000</h4>
+                </div>
+                <h4 class="see2" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
+
+
+                <h1 style="font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50.7226px;
+                line-height: 76px;
+                /* or 150% */
+                
+                text-align: center;
+                text-transform: uppercase;
+                
+                color: #222424">LATEST EDITION</h1>
+       
+                <div class="iphone13">
+                   <img class="ip13" alt="iPhone 13 Pro" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 15.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Apple iPhone 13 Pro - 128GB - <br>5g Ram ...</p>
+                   <h4 class="price">₦670,000</h4>
+                </div>
+       
+                <div class="samsung">
+                   <img class="sam" alt="Samsung Galaxy Note 9" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 16.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Samsung Gaxaly Note9 <br>8+512GB Note 9 4G LTE</p>
+                   <h4 class="price">₦670,000</h4>
+                </div>
+       
+                <div class="iphonexs">
+                   <img class="iphxs" alt="iPhone XS Max" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 17.png">
+                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
+                   <p class="gad">Apple IPhone Xs Max - 6.5” - <br>512 ...</p>
+                   <h4 class="price">₦380,000</h4>
+                </div>
+                <h4 class="see3" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
+                
+
+                <h1 style="font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50.7226px;
+                line-height: 76px;
+                /* or 150% */
+                
+                text-align: center;
+                text-transform: uppercase;
+                
+                color: #222424">TOP BRANDS</h1>
+
+<div class="brands">
+    <div class="applebg">
+    <img class="appbg" alt="appleicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\apple-removebg-preview 2.png">
     </div>
-    {% endfor %}
-
-    <h3>Welcome</h3>
-
-    {% if user.is_authenticated %}
-    <h3>Hello {{ name }}</h3>
-    <h4>You're Successfully logged in.</h4>
-    <button type="submit"><a href="/signout">Signout</a></button>
-
-    {% else %}
-    <button type="submit"><a href="/signup">SignUp</a></button>
-    <button type="submit"><a href="/signin">Login</a></button>
-    {% endif %}
+    <div class="nokiabg">
+        <img class="nokbg" alt="nokiaicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\nokia-removebg-preview 1.png">
+        </div>
+        <div class="samsungbg">
+            <img class="sambg" alt="samsungicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\samsung-removebg-preview 1.png">
+            </div>
+            <div class="infinixbg">
+                <img class="infinixbg" alt="infinixicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\infinix-removebg-preview 1.png">
+                </div>
+                <div class="tecnobg">
+                    <img class="tecbg" alt="tecnoicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\tecno-removebg-preview 1.png">
+                    </div>
+ </div>
+       
+                
+       
+       
+       
+       
+       
+       
+           </div>
+       
+                <div class="update"><h3 style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 32px; text-align: center; line-height: 40px;">Get update on Deals and Prices</h3>
+                   <p style="font-size: 16px; font-family: 'Poppins'; font-weight: 400; text-align: center;">Receive Updates and others you would actually be interested in. Unsubscribe any time
+                   </p>
+                   <form class="example" action="/action_page.php">
+                     <input type="text" placeholder="Your email" name="search2">
+                     <button type="submit">Subscribe</button>
+                   </form>
+               </div> 
+         <!--  #### CREATE FOOTER ####  -->
+         <footer class="footer-col">
+            <div>
+                <b>Categories</b><br>
+                Mobiles <br>
+                Laptops<br>
+                Tablets <br> 
+                Accessories<br>
+                Appliances <br>
+            </div>
+            <div>
+                <b>Brands</b><br>
+                Apple<br>
+                Samsung<br>
+                Tecno<br>
+                Infinix<br>
+                Nokia<br>
+                Hp<br>
+                Lenovo<br>
+            </div>
+            <div>
+                <b>Site</b><br>
+                About us<br>
+                Team<br>
+                Merchant sign up<br>
+                User Guide<br>
+                User Guide
+            </div>
+            <div>
+                <b>Support</b><br>
+                Contact Us<br>
+                Help Center<br>
+                Merchant Sign Up<br>
+                Reviews<br>
+                Privacy Policy
+            </div>
+            <div class="last-row">
+                (c) 2022 Shopsmart.com. All Rights Reserved
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
