@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 import requests
 import re
 from bs4 import BeautifulSoup
+from django.contrib.sites.shortcuts import get_current_site
 
 headers = {"user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"}
 
