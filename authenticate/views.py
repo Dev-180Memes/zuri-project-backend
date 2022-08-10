@@ -14,6 +14,12 @@ from . tokens import generate_token
 def home(request):
     return render(request, "authenticate/index.html")
 
+def about(request):
+    return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
+
 def signup(request):
 
     if request.method == "POST":

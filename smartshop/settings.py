@@ -33,8 +33,9 @@ SECRET_KEY = 'django-insecure-p2xd*o%q*gaqrsr@^qky%om%_q-=l$dw=zd6(k&682xdmnd4yf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['shopsmartzuri.herokuapp.com']
+ALLOWED_HOSTS = ['shopsmartzuri.herokuapp.com', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ['https://shopsmartzuri.herokuapp.com', 'http://127.0.0.1:8000']
 
 # Application definition
 
@@ -47,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'authenticate',
     'products',
+    'topdeals',
+    'categories',
 ]
 
 MIDDLEWARE = [

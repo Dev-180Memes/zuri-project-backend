@@ -24,13 +24,17 @@
             <span>Shop smart at the right price</span>
           </div>
           <div class="navlist">
-            <a class="active" href="/home">Home</a>
+            <a class="active" href="/">Home</a>
             <a href="#">Deal</a>
             <a href="#">Categories</a>
             <a href="#">Stores</a>
             <a href="#">Price Tracker</a>
           </div>
-          <div class="signup"><a href="#Sign In">Sign Up</a></div>
+          {% if user.is_authenticated %}
+          <div class="signup"><a href="/signin">Log In</a></div>
+          {% else %}
+          <div class="signup"><a href="/signup" style="color: #000000; text-decoration: none;">Sign Up</a></div>
+          {% endif %}
         </div>
         <div class="headersearch">
           <form class="searchbar" action="/products/search" method="post">
@@ -155,6 +159,10 @@
         position: relative;
         width: 100%;
         background: #ffffff;
+        }
+        .navlist a{
+          text-decoration: none;
+          color: inherit;
         }
         .one {
         /* Auto layout */
