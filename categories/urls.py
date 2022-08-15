@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('laptop', views.laptop, name='laptop'),
+    path('mobile', views.mobile, name='mobile'),
 ]

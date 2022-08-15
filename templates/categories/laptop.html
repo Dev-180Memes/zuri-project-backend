@@ -12,7 +12,7 @@
    <div class="container">
       <div class="head">
          <div class="header">
-            <img src="images/logo.png" alt="">
+            <img src="C:\Users\TIMI\Python\Project\Project 2\zuri-project-backend\templates\categories\logo.png" alt="">
             <ul class="links">
                <li><a href="#" class="active">Home</a></li>
                <li><a href="#">Deals</a></li>
@@ -351,7 +351,279 @@
          <!-- end of everything -->
    </div>
    <style>
+         body{
 
+
+            background: #ffffff;
+            }
+      *{
+         box-sizing: border-box;
+         padding: 0;
+      }
+      .container{
+         max-width: 100%;
+         background-color: rgb(250, 246, 246);
+         padding: 0;
+      }
+      .container h5, #product{
+         position: relative;
+         margin-left: 60px;
+         top: 10px;
+         padding-bottom: 30px;
+      }
+
+      /* header */
+      .container .header{
+         display: flex;
+         justify-content: space-between;
+         
+
+      }
+      .header .user{
+         display: flex;
+         position: relative;
+         left: -20px;
+         top: 10px;
+         
+      }
+      .header .user i{
+         position: relative;
+         top: 22px;
+         left: -10px;
+      }
+      .container .head{
+         background-color: white;
+         padding-bottom: 10px;
+      }
+
+      .header input{
+         color: white;
+         border: none;
+         border-radius: 3px;
+         background-color: darkblue;
+         width: 150px;
+         height: 40px;
+         text-align: center;
+         position: relative;
+         top: 5px;
+         
+      
+      }
+      .header img{
+         width: 100px;
+         height: 70px;
+      }
+
+      .container .search{
+         /* position: relative; */
+         /* left: 770px; */
+         margin-top: 5px;
+         /* margin-bottom: 8px; */
+         margin-left: 772px;
+         margin-bottom: 8px;
+         background-color: white;
+      }
+      .search button{
+         padding: 8px;
+         width: 100px;
+         border-radius: 0 4px 4px 0;
+         border-left: none;
+         color: black;
+         background-color:gold;
+         position: relative;
+         top: -2px;
+         
+      }
+      .search input{
+         position: relative;
+         left: 10px;
+         padding: 8px;
+         border-radius: 4px 0 0 4px;
+         border-right: none;
+         width: 600px;
+      }
+      span{
+         position: relative;
+         left: 10px;
+      }
+      /* end of search */
+
+      /* end of header */
+      /* for the products */
+      .first-product{
+         display: flex;
+         justify-content: space-around;
+         height: 250px;
+         margin-bottom: 20px;
+         border: 1px solid lightgray;
+         border-radius: 2px;
+      }
+      img{
+         position: relative;
+         top: 15px;
+         width: 200px;
+         height: 170px;
+      }
+      .info{
+         margin-bottom: 20px;
+         border-bottom: 1px solid black;
+      }
+      .intro{
+         background-color: white;
+         padding: 20px;
+         max-width: 93%;
+         margin: 0 auto;
+         border-radius: 3px;
+         margin-bottom: 20px;
+         margin-top: 20px;
+      }
+      .intro a{
+         color: gray;
+      }
+
+      /* categories */
+
+      .categories{
+         background-color: white;
+         margin-bottom: 20px;
+         max-width: 93%;
+         margin: 0 auto;
+         padding-left: 10px;
+         padding-top: 5px;
+         
+      }
+      .categories img{
+         width: 90px;
+         height: 80px;
+      }
+      .categories .boxes{
+         display: flex;
+         /* justify-content: space-between; */
+         margin-bottom: 50px;
+         padding: 10px;
+         position: relative;
+         left: -40px;
+      }
+
+      .categories .boxes .phones, .laptop,.tablets,.Accessories,.apple{
+         display: flex;
+         border: 1px solid gray;
+         border-radius: 3px;
+         margin-left: 30px;
+         
+         width: 500px;
+         /* justify-content: space-evenly; */
+         align-items: center;
+         padding: 10px;
+         margin-bottom: 30px;
+      }
+
+      .boxes h4{
+         position: relative;
+         left: 30px;
+      }
+      .boxes img{
+         position: relative;
+         top: -0.2px;
+      }
+      /* end of categories */
+      a{
+         text-decoration: none;
+         color: black;
+         position: relative;
+         margin-top: 10px;
+         bottom: -2px;
+      }
+      .first-product{
+         position: relative;
+         background-color: white;
+         max-width: 91%;
+         margin: 0 auto;
+         margin-top: 40px;
+      }
+      .first-product .text{
+         position: relative;
+         left: -120px;
+      }
+      .first-product .pad{
+         position: relative;
+         left: -140px;
+      }
+      .first-product .button button{
+         background-color: rgb(46, 46, 165);
+         padding: 12px;
+         width: 140px;
+         margin-top: 110px;
+         border-radius: 4px;
+         border: none;
+         color: white;
+      }
+
+      .first-product .button button a{
+         color: white;
+      }
+
+      .first-product .button button span{
+         margin-right: -15px;
+         padding: 20px;
+         font-weight: bold;
+      }
+      .first-product .text span{
+         color: blue;
+      }
+      .first-product .text .money{
+         font-size: 25px;
+      }
+      .first-product .text .first-1{
+         padding: 5px;
+         color: gold;
+      }
+      .first-product .text #last{
+         padding: 5px;
+         color: lightgray;
+      }
+
+      /* footer body */
+      #footer{
+         display: flex;
+         justify-content: space-around;
+         text-align: center;
+         margin-bottom: 20px;
+         border-bottom: 1px solid gray;
+         line-height: 0.4em;
+         margin-top: 50px;
+         background-color: rgb(252, 252, 252);
+         padding: 10px;
+      }
+      #footer ul{
+         display: block;
+      }
+
+      /* footer */
+      .foot{
+         position: relative;
+         bottom: 0;
+         text-align: center;
+         margin-top: 18px;
+         
+      
+         /* background-color: yellowgreen; */
+      }
+
+
+      ul{
+         
+         display: flex;
+         justify-content: space-between;
+      }
+      ul li{
+         list-style: none;
+         padding: 20px;
+      }
+      ul li a{
+         text-decoration: none;
+         color: black;
+      }
    </style>
 </body>
 </html>

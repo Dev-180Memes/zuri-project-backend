@@ -1,40 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopSmart</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0b20a86ad5.js" crossorigin="anonymous"></script>   
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="landingpage.css">
 </head>
 <body>
-    {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-dismissable fade show" role="alert" style="position: absolute;">
-            <strong>Message:</strong> {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    {% endfor %}
+    <div class="page-cover">
     <!-- #### CREATE NAV SECTION AND SPLIT INTO COLUMNS #### -->
-    
-    <div class="white-bg">
+     <div class="white-bg">
         <div class="row">
             <div class="left-column">
-                <img style="background-color: #ffffff;" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png">
-
+                <img style="background-color: #ffffff; width: 100px; height: auto" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/singup-update/Frame%202495.png">
             </div>
             <div class="menu-column">
-                <nav style="background-color:#ffffff;">
+                <nav>
                     <ul>
-                      <li><a class="active" href="/home">Home</a></li>
-                      <li><a href="#">Deals</a></li>
-                      <li><a href="#">Categories</a></li>
-                      <li><a href="#">Stores</a></li>
-                      <li><a href="#">Price Tracker</a></li>
+                      <li><a class="active" href="#home">Home</a></li>
+                      <li><a href="#news">Deals</a></li>
+                      <li><a href="#contact">Categories</a></li>
+                      <li><a href="#about">Stores</a></li>
+                      <li><a href="#aboutTT">Price Tracker</a></li>
                     </ul>
                 </nav>
             </div>
@@ -50,1068 +42,704 @@
         </div>
          <!-- #### SEARCH FORM #### -->
         <div class="search">
-               <div class="search-container">
-                    <form action="/products/search" method="post">
-                    {% csrf_token %}
-                      <input type="search" name="search" id="search" placeholder="what are you searching for?" name="search"><button type="submit">search<i class="fa-solid fa-fa-search"></i></button>
+            <div class="search-container">
+                <form action="/products/search" method="post">
+                {% csrf_token %}
+                  <input type="text" placeholder="what are you searching for?" name="search"><button type="submit">search<i class="fa-solid fa-fa-search"></i></button>
 
-                    </form>
-                </div>
+                </form>
+                    
+            </div>
         </div>
-                <!-- #### CONTENT SECTION #### -->
-                <div class="shopsmart">
-                   <div class="txt">
-                       <h1>SHOP SMART</h1>
-                       <p style="font-family: 'Poppins'; margin-left: -1100px; font-style: normal; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424;">Shop right at the<br> right price</p>
-                       <div class="right-column1">
-                        <a class="button1" href="#" style="font-family: 'Poppins';
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 20px;
-                        line-height: 28px;
-                        /* identical to box height, or 140% */
-                        
-                        display: flex;
-                        align-items: center;
-                        
-                        color: #FFFFFF;
-                        ">COMPARE PRICES</a></div>
-                   </div>
-                   <div class="apple">
-                       <img class="apple12" alt="Apple Iphone 12" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 5.png">
-                       <h2 style="font-family: 'Poppins'; margin-left: 950px; margin-top: -200px; margin-bottom: 200px; font-style: normal; font-weight: 800; font-size: 48px; line-height: 102px; color: #222424;">Apple iPhone 12</h2>
-                       <p style="font-family: 'Poppins'; font-style: normal; margin-left: 700px; margin-top: -200px; margin-bottom: 200px; font-weight: 600; font-size: 40px; line-height: 56px; text-align: center; color: #222424">Say hello to 5G</p>
-                   </div>
-                
-                <h1 style="font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 50.7226px;
-                line-height: 76px;
-                /* or 150% */
-                
-                text-align: center;
-                text-transform: uppercase;
-                
-                color: #222424">POPULAR SEARCH</h1>
-       
-                <div class="nokiac330">
-                   <img class="nokia" alt="nokiac30" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\nokia-c30-1 1.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Nokia C30 - 6.82” HD+ <br>- 3gb Ram</p>
-                   <h4 class="price">₦81,000</h4>
+        <div class="list-padding">
+            <div class="listing">
+                <div class="list-image">
+                    <img style="background-color: #ffffff;" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/Tecno%20Brands/images/Tecno%20POVA%205G%201.png">
                 </div>
-       
-                <div class="infinixzero">
-                   <img class="infinixz" alt="Infinix Zero x" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Frame 2356.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Infinix Zero X Pro - X6811 - <br>6.67 ...</p>
-                   <h4 class="price">₦181,000</h4>
+                <div class="list-content">
+                    <h3>Tecno POVA 5G</h3>
+                    <p>Height: 172.82 mm
+                        Width: 78.24mm
+                        Thickness: 9.07 mm
+                        6.9" FHD+Dot-in Display
+                        1080*2460
+                        18W Flash Charge
+                        128GB ROM
+                        8GB RAM
+                        120Hz Refresh Rate
+                        6000mAh(typ)</p>
+                    <i class="fa-solid fa-star" style="color: #F6CC5C;"></i><i class="fa-solid fa-star" style="color: #F6CC5C;"></i><i class="fa-solid fa-star" style="color: #F6CC5C;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i> <b>(3)</b>
+                    <p>Starting at <span style="font-size:12px; color: #053674;">NGN</span> <span style="font-size:25px; color: #053674;">65 250.00</span></p>
                 </div>
-       
-                <div class="tecno">
-                   <img class="tecnoc" alt="Tecno Camon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 12.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Tecno Camon 17p - Cg7<br>-Silver 6.8” ...</p>
-                   <h4 class="price">₦112,000</h4>
-                </div> 
-
-                <h4 class="see1" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
-       
-                <h1 style="font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 50.7226px;
-                line-height: 76px;
-                /* or 150% */
-                
-                text-align: center;
-                text-transform: uppercase;
-                
-                color: #222424">TOP DEALS</h1>
-       
-                <div class="macbook">
-                   <img class="mac" alt="Apple Macbook" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\macbook pro 13 2.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Apple Macbook Pro 13.3” <br>2020 ...</p>
-                   <h4 class="price">₦2,900,000</h4>
                 </div>
-       
-                <div class="applewatch">
-                   <img class="applew" alt="Apple Watch" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 13.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Apple Watch Nike Series 6 - Gps ...</p>
-                   <h4 class="price">₦370,000</h4>
                 </div>
-       
-                <div class="hp">
-                   <img class="hplaptop" alt="HP Spectre" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 44.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad1">Hp SPECTRE 15 X360 11TH GEN CORE I7,1TB <br>SSD,16GB RAM,4K <br>DISPLAY,TOUCH,BACKLIT,WIN 10 PRO <br>SPECTRE 15T 11TH GEN</p>
-                   <h4 class="price">₦840,000</h4>
-                </div>
-
-                <h4 class="see2" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
-
-
-                <h1 style="font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 50.7226px;
-                line-height: 76px;
-                /* or 150% */
-                
-                text-align: center;
-                text-transform: uppercase;
-                
-                color: #222424">LATEST EDITION</h1>
-       
-                <div class="iphone13">
-                   <img class="ip13" alt="iPhone 13 Pro" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 15.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Apple iPhone 13 Pro - 128GB - <br>5g Ram ...</p>
-                   <h4 class="price">₦670,000</h4>
-                </div>
-       
-                <div class="samsung">
-                   <img class="sam" alt="Samsung Galaxy Note 9" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 16.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Samsung Gaxaly Note9 <br>8+512GB Note 9 4G LTE</p>
-                   <h4 class="price">₦670,000</h4>
-                </div>
-       
-                <div class="iphonexs">
-                   <img class="iphxs" alt="iPhone XS Max" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\image 17.png">
-                   <img class="like" alt="likebutton" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\Group 39725.png">
-                   <p class="gad">Apple IPhone Xs Max - 6.5” - <br>512 ...</p>
-                   <h4 class="price">₦380,000</h4>
-                </div>
-
-                <h4 class="see3" style="margin-left: 740px; margin-top: -150px; margin-bottom: 100px;">see more</h4>
-                
-
-                <h1 style="font-family: 'Poppins';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 50.7226px;
-                line-height: 76px;
-                /* or 150% */
-                
-                text-align: center;
-                text-transform: uppercase;
-                
-                color: #222424">TOP BRANDS</h1>
-
-<div class="brands">
-    <div class= "brands-text1">
-        <h2 class = "brands-text">Shop from your trusted and favourite Brands</h2>
-    </div>   
-    <div class = "brands-images1"> 
-       <div class="applebg">
-         <img class="appbg" alt="appleicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\apple-removebg-preview 2.png">
-       </div>
-       <div class="nokiabg">
-          <img class="nokbg" alt="nokiaicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\nokia-removebg-preview 1.png">
+<div>
+    <div class="popsearch">POPULAR SEARCH</div>
+    <div class="popula1">
+        <div><img style="background-color: #ffffff; width: 320px; height: auto;" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/categoryMobile/images/nokiac30.jpeg">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Nokia C30 - 6.82” HD+ - 3gb Ram</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 81,000 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
         </div>
-        <div class="samsungbg">
-            <img class="sambg" alt="samsungicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\samsung-removebg-preview 1.png">
+
+        <div><img style="background-color: #ffffff; width: 320px; height: auto;" alt="logo" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/categoryMobile/images/infinix.jpeg">
+            <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Infinix Zero X Pro - X6811 - 6.67 ...</span><br>
+          <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 181,000 </span>
+        <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+        (No reviews yet)</span><br>
+        <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+        </div>
+
+        <div><img style="background-color: #ffffff; width: 200px; height: auto;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/Tecno%20Brands/images/Tecno%20Camon%2018%20premier%201.png">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Tecno Camon 17p - Cg7-Silver 6.8” ...</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 112,000 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
         </div>
     </div>
-    <div class = "brands-images2">
-        <div class="infinixbg">
-            <img class="infinixbg" alt="infinixicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\infinix-removebg-preview 1.png">
+    <div style="text-align: center; color: #222424; font-size: 20px; font-weight: 600;">see more</div>
+</div>
+
+<div>
+    <div class="popsearch">TOP DEAL</div>
+    <div class="popula1">
+        <div><img style="background-color: #ffffff; width: 320px; height: auto;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/Latest-Edition/images/macbook-pro-13.3.png">
+            <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Apple Macbook Pro 13.3” (2020 ...</span><br>
+          <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 2,900,000 </span>
+        <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+        (No reviews yet)</span><br>
+        <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+       </div>
+
+        <div><img style="padding:30px ; width: 320px; height: auto" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/image%2013.png">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Apple Watch Series 7</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 280,000 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
         </div>
-        <div class="tecnobg">
-            <img class="tecbg" alt="tecnoicon" src="C:\Users\Home\desktop\zuri-project-frontend\landing page\icons\tecno-removebg-preview 1.png">
-        </div>   
-    </div>    
- </div>
-       
-                
-       
-       
-       
-       
-       
-       
-           </div>
-       
-                <div class="update">
-                    <div class="text1">
-                    <h3 style="font-family: 'Poppins'; background-color: #FCEEC9; padding-top: 50px; font-style: normal; font-weight: 500; font-size: 32px; text-align: center; line-height: 40px;">Get update on Deals and Prices</h3>
-                   <p style="font-size: 16px; font-family: 'Poppins'; background-color: #FCEEC9; padding-top: 20px; font-weight: 400; text-align: center;">Receive Updates and others you would actually be interested in. Unsubscribe any time
-                   </p></div>
-                   <form class="example" action="/action_page.php">
-                     <input type="text" placeholder="Your email" name="search2">
-                     <button type="submit">Subscribe</button>
-                   </form>
-               </div>
+
+        <div><img style="padding-top: 30px ; width: 320px; height: auto" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/image%2014.png">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 16.45px;">Hp SPECTRE 15 X360 11TH GEN CORE I7,1TB SSD,16GB RAM,4K DISPLAY,TOUCH,BACKLIT,WIN 10 PRO SPECTRE 15T 11TH GEN</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 999,999.99 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+        </div>
+    </div>
+    <div style="text-align: center; color: #222424; font-size: 20px; font-weight: 600;">see more</div>
+</div>
+
+<div>
+    <div class="popsearch">LATEST EDITION</div>
+    <div class="popula1">
+        <div><img style="padding:30px ; width: 270px; height: auto" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/image%2015.png">
+            <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Apple iPhone 13 Pro - 128GB - 5g Ram ...</span><br>
+          <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 670,000 </span>
+        <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+        (No reviews yet)</span><br>
+        <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+       </div>
+
+        <div><img style="padding:30px ; width: 270px; height: auto" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/image%2016.png">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Samsung Gaxaly Note9 8+512GB Note 9 4G LTE</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 670,000 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+        </div>
+
+        <div><img style="padding:30px ; width: 270px; height: auto" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/image%2017.png">
+             <br><span style="color: #1A1A1A; font-weight: 600; font-size: 20.45px;">Apple IPhone Xs Max - 6.5” - 512 ...</span><br>
+           <span style="color:#053674; font-weight: 500; font-size: 32.72px;"> &#8358; 530,000 </span>
+         <br><span style="font-size: 16.36px; font-weight: 600;"><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i><i class="fa-solid fa-star" style="color: #AAAAAA;"></i>
+         (No reviews yet)</span><br>
+         <span style="color: #1A1A1A; font-weight: 600; font-size: 16.36px;">Compare 2 online shops</span>
+        </div>
+    </div>
+    <div style="text-align: center; color: #222424; font-size: 20px; font-weight: 600;">see more</div>
+</div>
+
+<div>
+    <div class="popsearch">TOP BRANDS </div>
+    <div class="top">
+        <div class="top1">Shop from your trusted and favourite Brands</div>
+        <div class="top2">
+            <div class="top2in">
+                <div class="circle1"><img style="margin-top: 50px;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/apple-removebg-preview%202.png"></div>
+                <div class="circle2"><img style="margin-top: 50px;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/nokia-removebg-preview%201.png"></div>
+                <div class="circle3"><img style="margin-top: 40px;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/samsung-removebg-preview%201.png"></div>
+            </div>
+            <div class="top2inin">
+                <div class="circl"><img style="margin-top: 40px;" src="https://github.com/Dev-180Memes/zuri-project-frontend/blob/main/landing%20page/icons/infinix-removebg-preview%201.png?raw=true"></div>
+                <div class="circ"><img style="margin-top: 30px;" src="https://raw.githubusercontent.com/Dev-180Memes/zuri-project-frontend/main/landing%20page/icons/tecno-removebg-preview%201.png"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="subscribe">
+<span style="color: #053674; font-weight: 500; font-size: 32px;">Get Update on Deals and Prices </span>
+<p style="color: #1A1A1A; font-weight: 400; font-size: 16px;">Recieve updates and offers you’ll actually be interested in. Unsubscribe any time. </p><br>
+          <form action="#">
+              <input type="text" placeholder="Your email" name="subscribe">
+             <button type="submit">Subscribe</button>
+         </form>
+         
+  </div>   
+
+
+
+
+
+        <!-- <div class="update"><h3 style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 32px; text-align: center; line-height: 40px;">Get update on Deals and Prices</h3>
+            <p style="font-size: 16px; font-family: 'Poppins'; font-weight: 400; text-align: center;">Receive Updates and others you would actually be interested in. Unsubscribe any time
+            </p>
+            <form class="example" action="/action_page.php">
+              <input type="text" placeholder="Your email" name="search2">
+              <button type="submit">Subscribe</button>
+            </form>
+        </div>  -->
          <!--  #### CREATE FOOTER ####  -->
          <footer class="footer-col">
-            
-            <div class="cat">
-                <b>Categories</b>
-                <br/>
-                <br/>
-                Mobiles
-                <br/>
-                <br/>
-                Laptops
-                <br/>
-                <br/>
-                Tablets 
-                <br/> 
-                <br/>
-                Accessories
-                <br/>
-                <br/>
-                Appliances 
+            <div>
+                <h4>Categories</h4>
+                Mobiles <br><br>
+                Laptops<br><br>
+                Tablets <br><br> 
+                Accessories<br><br>
+                Appliances <br>
             </div>
-            <br/>
-            <div class="cat">
-                <b>Brands</b><br/><br/>
-                Apple<br/><br/>
-                Samsung<br/><br/>
-                Tecno<br/><br/>
-                Infinix<br/><br/>
-                Nokia<br/><br/>
-                Hp<br/><br/>
-                Lenovo
+            <br>
+            <div>
+                <h4>Brands</h4>
+                Apple<br><br>
+                Samsung<br><br>
+                Tecno<br><br>
+                Infinix<br><br>
+                Nokia<br><br>
+                Hp<br><br>
+                Lenovo<br><br>
             </div>
-            <br/>
-            <div class="cat">
-                <b>Site</b><br/><br/>
-                About us<br/><br/>
-                Team<br/><br/>
-                Merchant sign up<br/><br/>
-                User Guide
+            <br>
+            <div>
+                <h4>Site</h4>
+                About us<br><br>
+                Team<br><br>
+                Merchant sign up<br><br>
+                User Guide<br><br>
+                Documentation
             </div>
-            <br/>
-            <div class="cat">
-                <b>Support</b><br/><br/>
-                Contact Us<br/><br/>
-                Help Center<br/><br/>
-                Merchant Sign Up<br/><br/>
-                Reviews<br/><br/>
+            <br>
+            <div>
+                <h4>Support</h4>
+                Contact Us<br><br>
+                Help Center<br><br>
+                Merchant Sign Up<br><br>
+                Reviews<br><br>
                 Privacy Policy
             </div>
             <div class="last-row">
-                (c) 2022 Shopsmart.com. All Rights Reserved
+                <span style="font-size: 17px;">&#169</span> 2022 Shopsmart.com. All Rights Reserved
             </div>
         </footer>
     </div>
     <style>
-        body{
-
-
-        background: #ffffff;
-        }
-
-
-        .white-bg {
-        background-color: #ffffff;
-        width: 70%;
-        margin: auto;
-        padding: 20px;
-        }
-        
-        /*### CREATE FLEX NAV ROW ###*/
-        .row {  
-        display: flex;
-        flex-flow: row wrap;
-        }
-
-        /* Create three menu columns that sits next to each other */
-        /* Left column */
-        .left-column {
-        flex: 10%;
-        background-color: #ffffff;
-        }
-
-        /* Menu column */
-        .menu-column {
-        flex: 70%;
-        background-color: #ffffff;
-        }
-
-        /* Right column */
-        .right-column {
-        flex: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        }
-
-        .right-column1 {
-        flex: 10%;
-            display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        margin-left: -1100px;
-        margin-top: 100px;
-        
-        }
-
-        nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        }
-
-        li a {
-        display: block;
-        color: #000;
-        font-size: 12px;
-        padding: 5px 16px;
-        text-decoration: none;
-        font-weight: bold;
-        }
-
-        li a:hover {
-        color: #ddd;
-        }
-
-        
-        /*###  STYLE NAV SIGN-IN BUTTON  ###*/
-        a.button:link, a.button:visited {
-        background-color: #053573;
-        color: white;
-        padding: 5px 40px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        }
-
-        a.button1:link, a.button1:visited {
-        
-        color: white;
-        padding: 5px 40px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        width: 291px;
-        height: 60px;
-
-        background: #053674;
-        border-radius: 4px;
-        }
-
-        .search {
-        background-color: #ffffff;
-        }
-        .search .search-container {
-        float: right;
-        }
-
-        .search:after {
-        display: table;
-        content: "";
-        clear: both;
-        }
-        
-        .search input[type=text] {
-        padding: 9px 150px 9px 5px;
-        margin-top: 12px;
-        font-size: 20px;
-        margin-right: 0px;
-        border-radius: 0 5px 5px 0;
-        border: 1px solid black;
-        }
-
-        ::placeholder {
-        font-size: 12px;
-        }    
-
-        .search .search-container button {
-        padding: 15px 25px;
-        margin-top: 8px;
-        background: #F6cc5c;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 12px 9px 12px 20px;
-        gap: 16px;
-
-        width: 126px;
-        height: 48px;
-
-
-        background: rgba(246, 204, 92, 0.75);
-        border-radius: 0px 5px 5px 0px;
-        font-size: 11px;
-        border-radius: 5px 0 0 5px;
-        border: none;
-        cursor: pointer;
-        color: black;
-        }
-
-        .apple12 {
-        margin-left: 600px;
-        margin-top: -200px;
-        }
-
-        .applebg {
-        position: relative;
-        width: 171px;
-        height: 159px;
-        left: 279px;
-        top: 0px;
-        background: #ffffff;
-        border-radius: 50%;
-        margin-left: 50px;
-        margin-right: 50px;
-        }
-
-        .nokiabg {
-        position: relative;
-        width: 171px;
-        height: 159px;
-        left: 279px;
-        top: 0px;
-        margin-right: 50px;
-        
-
-        background: #ffffff;
-        border-radius: 50%;
-        }
-
-        .samsungbg {
-        position: relative;
-        width: 171px;
-        height: 159px;
-        left: 279px;
-        top: 0px;
-
-        
-
-        background: #ffffff;
-        border-radius: 50%;
-        }
-
-        .infinixbg {
-        position: relative;
-        width: 171px;
-        height: 159px;
-        left: 300px;
-        top: 0px;
-        margin-right: 50px;
-        
-
-        background: #ffffff;
-        border-radius: 50%;
-        }
-        .gad1 {
-        width: 335px;
-        height: 80px;
-
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        }
-        .tecnobg {
-        position: relative;
-        width: 171px;
-        height: 159px;
-        left: 310px;
-        top: 0px;
-        
-
-        background: #ffffff;
-        border-radius: 50%;
-        }
-        
-        .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 16px 48px;
-        gap: 16px;
-
-        position: absolute;
-        width: 1440px;
-        height: 181.28px;
-        left: 0px;
-        top: 0.5px;
-
-        background: #FFFFFF;
-        /* Nav shadow */
-
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .logo{
-            position: relative;
-        max-width: 40px;
-            max-height: 40px;
-            /* left: -100px; */
-        }
-        .nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px 1px 0px 0px;
-        gap: 136px;
-        
-        width: 1257px;
-        height: 83.28px;
-        ;
-        }
-        /* for the user in the nav*/
-        .user{
-            position: relative;
-            /* right: -30px; */
-            display: flex;
-            justify-content: space-around;
-        }
-        .user button{
-            background-color: black;
-            width: 150px;
-            color: white;
-            position: relative;
-            padding: 5px;
-            border-radius: 4px;
-            /* right: -90px; */
-        }
-        .usr{
-            position: relative;
-            right: 15px;
-            background-color: gray;
-            max-width: 20px;
-            max-height: 20px;
-        }
-        .headers{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        gap: 60px;
-        
-        width: 668px;
-        height: 28px;
-        
-        }
-        /* list items and link for nav */
-        ul{
-            position: relative;
-            top: 5px;
-            display: flex;
-            justify-content: space-between;
-        }
-        li{
-            list-style: none;
-            text-decoration: none;
-            padding: 20px;
-        }
-        a{
-            text-decoration: none;
-            color: black;
-            
-        }
-        .new{
-            float: left;
-            position: relative;
-            left: 760px;
-            top: 5px;
-            /* right: -49px; */
-            
-        }
-        .new button{
-            background-color: black;
-            color: white;
-            border-radius: 0;
-            width: 100px;
-            padding: 8px;
-            
-        
-        }
-        .new span{
-            position: relative;
-            right: -10px;
-        }
-        .new input{
-            position: relative;
-            left: -10px;
-            width: 600px;
-            padding: 6px;
-            
-        }
-        
-        /* footer */
-        #footer{
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid gray;
-            background-color: #E5EBF3;
-        }
-
-        .cat {
-            background-color: #E5EBF3;
-           }
-
-        #footer ul{
-            display: block;
-        }
-        
-        /* footer */
-        .foot{
-            position: relative;
-            bottom: 0;
-            text-align: center;
-            /* margin-top: 30px; */
-        
-            /* background-color: yellowgreen; */
-        }
-        
-        /* body */
-        *{
+        * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif ;
-            line-height: 1.5em;
-            background-color: #ffffff;
-        }
-
-        .nav-navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px 1px 0px 0px;
-        gap: 136px;
-
-        width: 1257px;
-        height: 83.28px;
-
-        background: #FFFFFF;
-        /* Nav shadow */
-
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        
-        
-        .txt h1 {
-        font-family: 'Poppins';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 68px;
-                            line-height: 102px;
-                            
-                            
-                            width: 477px;
-                            height: 102px;
-                            color: #222424;
-                            
-                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            position: relative;
-                            margin-top: 200px;
-        }
-        .update {
-            width: 1433px;
-            height: 268px;
-            margin-right: 5px;
-            background-color: #FCEEC9;
-        }
-
-        .example {
-            background-color: #FCEEC9;
-            margin-top: 20px;
-        }
-
-            
-            
-        
-            
-        form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
-            width: 550px;
-        height: 50px;
-
-        background: #FFFFFF;
-        border-radius: 0px;
-        margin-left: 200px;
-            float: left;
-            width: 60%;
-            background: #ffffff;
-            margin-right: 5px;
-        }
-        
-        form.example button {
-            float: left;
-            width: 30%;
-            padding: 10px;
-            width: 200px;
-        height: 50px;
-
-        background: #053674;
-        border: 2px solid #D9D9D9;
-        border-radius: 0px;
-
-            
-            color: white;
-            font-size: 17px;
-            
-        
-            cursor: pointer;
-        }
-
-        .boxcompare button{
-            box-sizing: border-box;
-            display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 60px;
-        gap: 10px;
-
-        width: 291px;
-        height: 60px;
-
-        background: #053674;
-        border-radius: 4px;
-        cursor: pointer;
-
-        }
-
-        .boxcompare button:hover {
-            background: #0b7dda;
-        }
-
-        .price {
-            font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 32.7243px;
-        line-height: 41px;
-        /* identical to box height, or 125% */
-
-
-        /* Dark Blue/Main Primary color */
-
-        color: #053674;
-        }
-
-        .gad {
-            width: 322.3px;
-        height: 58px;
-
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20.4527px;
-        line-height: 29px;
-        /* or 140% */
-
-
-        color: #222424;
-        }
-
-        .gad {
-        background-color: #ffffff;
-        }
-
-        .price {
-        background-color: #ffffff;
-        }
-
-        .like {
-            margin-top: 300px;
-            position: relative;
-        }
-
-        .nokia {
-        margin-left: 80px;
-        }
-
-        .infinixz {
-        margin-left: 80px;
-        }
-
-        .tecnoc {
-        margin-left: 80px;
-        }
-
-        .mac {
-        margin-left: 80px;
-        }
-
-        .applew {
-        margin-left: 80px;
-        }
-
-        .hplaptop {
-        margin-left: 80px;
-        }
-
-        .ip13 {
-        margin-left: 80px;
-        }
-
-        .sam {
-        margin-left: 80px;
-        }
-
-        .iphxs {
-        margin-left: 80px;
-        }
-
-        
-        .see {
-        position: relative;
-        width: 127px;
-        height: 28px;
-        left: calc(50% - 127px/2);
-        top: 587.69px;
-
-        /* Button */
-
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 28px;
-        /* identical to box height, or 140% */
-
-        text-align: center;
-
-        color: #222424;
-        }
-
-        .brands {
-        background-color: #E5EBF3;
-        display: flex;
-        
-        align-items: center;
-        padding: 0px;
-        gap: 17px;
-
-        width: 1433px;
-        height: 443.65px;
-        justify-content: center;
-
-        }
-
-        .brands-text {
-            background-color: #E5EBF3;
-            float: left;
-        }
-
-        .brands-text1 {
-            background-color: #E5EBF3;
-            float: left;
-        }
-
-        .brands-images1{
-            display: flex;
-            padding: 0px;
-            margin: 0px !important;
-            background-color: #E5EBF3;
-        }
-
-        .brands-images2{
-            display: flex;
-            margin-top: 20px;
-            padding: 0px;
-            background-color: #E5EBF3;
-        }
-
-
-
-        
-
-
-
-        .nokiac330 {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 5px;
-        }
-
-        .infinixzero {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 580px;
-        margin-top: -452px;
-        margin-bottom: 52px;
-        }
-
-        .tecno {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 1150px;
-        margin-top: -505px;
-        margin-bottom: 200px;
-        }
-
-        .macbook {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 5px;
-        }
-
-        .applewatch {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 580px;
-        margin-top: -452px;
-        margin-bottom: 52px;
-        }
-
-        .hp {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 1150px;
-        margin-top: -505px;
-        margin-bottom: 200px;
-        }
-
-        .iphone13 {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 5px;
-        }
-
-        .samsung {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 580px;
-        margin-top: -452px;
-        margin-bottom: 52px;
-        }
-
-        .iphonexs {
-            
-            width: 383.59px;
-        height: 453.33px;
-
-        background: #FFFFFF;
-        border: 1.05672px solid #CFCECE;
-        box-shadow: 0px 4.22688px 4.22688px rgba(0, 0, 0, 0.15);
-        border-radius: 8.45377px;
-        margin-left: 1150px;
-        margin-top: -505px;
-        margin-bottom: 200px;
-        }
-
-        
-        
-        form.example button:hover {   
-            background: #0b7dda;
-        }
-        
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-        
-        .footer-col {
-        display: flex;
-        flex-flow: row wrap;
-        gap: 7rem;
-        justify-content: center;
-        margin-top: auto;
-        font-size: 20px;
-        background-color: #E5EBF3;
-        width: 1433px;
-        height: 663.65px;
-        }
-
-        .last-row {
-        border-top:1px solid #000;
-        width: 100%;
-        text-align: center;
-        padding-top: 20px;
-        font-size: 12px;
-        background-color: #E5EBF3;
-        }
-
-        .cat {
-            background-color: #E5EBF3;
-            margin-top: 100px;
+          }
+          body {
+          margin: 0;
+          font-family: 'Poppins', sans-serif;
+          background-color: #efefef;
+          padding: 0;
           }
           
-          .cat b {
-            background-color: #E5EBF3;
+          .white-bg {
+              background-color: #fff;
+              width: 100%;
+              margin: auto;
+            
+              }
+              
+          /*### CREATE FLEX NAV ROW ###*/
+          .row {  
+            display: flex;
+            flex-flow: row wrap;
+              padding: 20px 20px 0px 30px;
+              height: 85px;
           }
-
-        /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 700px) {
-        .row {  
-        display: flex;
-        flex-flow: column;
-        }
-        .search .search-container {
-        float: none;
-        }
-        .search input[type=text] {
-        padding: 9px 50px 9px 10px;
-        }
-
-        }
+          
+          /* CREATE THREE COLUMN FOR NAV ROW */
+          /* Left column */
+          .left-column {
+            /* flex: 10%; */
+              text-align: center;
+          }
+          
+          /* Menu column */
+          .menu-column {
+            flex: 50%;
+            background-color: white;
+            height: 70px;
+          }
+          
+          /* Right column */
+          .right-column {
+            /* flex: 10%; */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* padding: 0px 0px 0px 0px; */
+          }
+          
+          nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
+          
+          li a {
+            display: block;
+            color: #000;
+            font-size: 20px;
+            padding: 0px 40px;
+            text-decoration: none;
+              font-weight: 500;
+          }
+          
+          li a:hover {
+            color: #ddd;
+          }
+          
+              
+          /*###  STYLE MENU SIGN-IN BUTTON  ###*/
+          a.button:link, a.button:visited {
+          background-color: #053573;
+          color: white;
+          padding: 5px 40px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          }
+          
+          /*###  STYLE MENU SEARCH  ###*/
+          .search .search-container {
+            float: right;
+            padding: 0 20px 20px 20px;
+          }
+          .search {
+              border-bottom: 3px solid #959595;
+          
+          }
+          
+          .search:after {
+          display: table;
+          content: "";
+          clear: both;
+              }
+              
+          .search input[type=text] {
+            padding: 6px 150px 6px 5px;
+            margin-top: 8px;
+            font-size: 14px;
+            border-radius:5px 0 0 5px;
+            border: 1px solid #000;
+            border-right: none;
+            height: 30px;
+            margin-right: -10px;
+          }
+          
+          .search textarea:focus, input:focus{
+              outline: none;
+          }
+          
+          ::placeholder {
+            font-size: 12px;
+            font-family:'Poppins';
+          }    
+          
+          .search .search-container button {
+            padding: 9px 10px 9px 10px;
+            margin-top: px;
+            background: #F6CC5C;
+            font-size: 11px;
+            border-radius: 0 5px 5px 0;
+            border: 1px solid #000;
+            cursor: pointer;
+            color:#000;
+            height: 30px;
+            margin-left: 0;
+            border-left: none;
+          }
+            /*### STYLE BRANDS ###*/
+         
+          
+          .brands {
+              padding: 5px;
+              display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
+          .brand-box {
+              display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+            /* padding: 20px 65px 20px 20px; */
+            border: 2px solid #E6E6E6;
+            border-radius: 5px;
+            width: 245px;
+            height: 70px;
+          }
+          /* .brand-box > div {
+            background-color: #f1f1f1;
+              padding: 20px;
+              display: inline-block
+          } */
+          .details {
+              padding: 5px;
+          }
+          
+          /*### STYLE LISTINGS ###*/
+          .list-image{
+              float: left;
+              width: 20%;
+              padding: 20px;
+              text-align: center;
+          }
+          .list-content{
+              float: left;
+              width: 55%;    
+              padding: 20px 20px 20px 20px;
+              font-size: 16px;
+          }
+          i {
+              margin-right: 10px;
+          }
+          .list-button{
+              float: right;
+              width: 20%;    
+              padding: 20px 20px 50px 0;
+          }
+          .listing:after {
+              content: "";
+              clear: both;
+              display: table;
+          }
+          .store {
+            margin-top: 110px;
+            background-color: #053674;
+            padding: 15px;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 16px;
+            
+          }
+          .listing {
+              border: 1px solid #ddd;
+          }
+          .list-padding {
+              padding: 20px 20px;
+          }
+          /*### STYLE PAGINATION ###*/
+          .center {
+            text-align: center;
+              padding: 40px 0;
+          }    
+          .pagination {
+            display: inline-flex;
+            gap: 1rem;
+          
+          }
+          
+          .pagination a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #053674;
+          }
+          
+          .pagination a:active {
+            background-color: #053674;
+            color: white;
+            /* border: 1px solid #4CAF50; */
+          }
+          
+          .pagination a:hover:not(.active) {background-color: #ddd;}
+          
+          .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+          }
+          
+          .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          
+          .update {
+            width: 100%;
+            height: 20%;
+              margin-top: 200px;
+              margin-bottom: 200px;
+              background-color: #FFF4D6;
+              }
+        
+            .popula1 {
+                display: flex;
+                justify-content: center;
+        
+            }
+        
+            .popsearch {
+                text-align: center;
+                Font: Poppins;
+                font-weight: 700;  
+                font-size: 50.72px;
+                line-height: 76.08px; 
+                margin-top: 40px;
+            }
+                
+        
+            .popula1 > div {
+                width: 100px;
+                margin: 20px;
+                text-align: center;
+                border: 1.06px solid #BFBFBF;
+                Width: 383.59px;
+                Height: 453.33px;
+                border-radius:  8.18px;
+            }
+        
+            .top{
+              background-color: #CDD7E3;
+              width: 100%;
+              height: 393px;
+              display: flex;
+              justify-content: center;
+        
+            }
+        
+            .top > div {
+              margin: auto;
+              text-align: center;
+              justify-content: center;
+              height: 300px;
+              /* background-color: #053674; */
+            }
+            .top1 {
+              padding: 100px;
+              color: #1A1A1A;
+              font-size: 32px;
+              font-weight: 500;
+            }
+            .top2 {
+              width: 70%;
+            }
+            .top2in {
+              display: flex;
+              justify-content: center;
+              width: 90%;
+              height: 159px;
+              margin-bottom: 10px;
+            
+            }
+        
+            .top2inin{
+              display: flex;
+              justify-content: center;
+              width: 60%;
+              height: 159px;
+              margin-left: 110px;
+              /* padding: 0px 100px 0px 100px; */
+        
+            }
+        
+            .circle1 {
+              width: 171px;
+              height: 159px;
+              background-color: #FFFFFF;
+              margin-right: 30px;
+              border-radius: 50%;
+        
+            }
+            .circle2 {
+              width: 171px;
+              height: 159px;
+              background-color: #FFFFFF;
+              margin-right: 30px;
+              margin-left: 30px;
+              border-radius: 50%;
+        
+            }
+            .circle3 {
+              width: 171px;
+              height: 159px;
+              background-color: #FFFFFF;
+              margin-left: 30px;
+              border-radius: 50%;
+        
+            }
+        
+            .circl {
+              width: 182px;
+              height: 159px;
+              background-color: #FFFFFF;
+              margin-right: 40px;
+              border-radius: 50%;
+        
+            }
+        
+            .circ {
+              width: 182px;
+              height: 159px;
+              background-color: #FFFFFF;
+              margin-left: 40px;
+              border-radius: 50%;
+        
+            }
+        
+            .subscribe {
+              padding-top: 43px;
+              background-color: #FCEEC9;
+              width: 100%;
+              height: 268px;
+              text-align: center;
+        
+            }
+        
+            .subscribe button {
+              margin: 10px;
+              background-color: #053674; 
+              font-weight: 600; 
+              color: #ffffff; 
+              font-size: 20px; 
+              border: 2px solid #BFBFBF; 
+              width: 200px; 
+              height: 50px;
+            }
+            .subscribe input[type="text"] {
+              background-color: #ffffff; 
+              border: none; 
+              width: 550px; 
+              height: 50px;
+            }
+              ::placeholder {
+              font-family:'Poppins';
+              font-size: 16px;
+              font-weight: 400;
+              color: Gray;
+            }
+          /*### STYLE FOOTER SECTION ###*/
+          .footer-col {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 0rem 15rem;
+            justify-content: center;
+            /* padding: 50px 0; */
+            font-size: 20px;
+            background-color: #ddd;
+            width: 100%;
+              }
+              
+              .last-row {
+              border-top:1px solid #000;
+                  width: 100%;
+                  text-align: center;
+                  padding: 20px;
+                  font-size: 12px;
+              }
+          h4 {
+              color: #053573;
+          }
+          
+          /* Responsive layout WITH FLEX - when the screen is less than 700px wide, make the columns stack on top of each other instead of next to each other */
+          
+          @media screen and (max-width: 775px) {
+            /*###  AJUST ROW ON MOBILE  ###*/  
+            .row {  
+            display: flex;
+            flex-flow: column;
+          }
+          /*###  STYLE MENU SEARCH  ###*/
+            .search .search-container {
+            float: none;
+            width: 85%;
+            margin: auto;
+          }
+            .search input[type=text] {
+            padding: 20px;
+          }
+          /*###  WHITE CONTENT BOX  ###*/
+          .white-bg {
+              background-color: #fff;
+              width: auto;
+              }
+           /*###  STYLE MENU SEARCH  ###*/   
+          .search input[type=text] {
+            padding: 9px 5px 5px 5px;
+            margin-top: 15px;
+            font-size: 14px;
+            border-radius:  0;
+            border: 1px solid #efefef;
+            height: 30px;
+          }
+          
+          ::placeholder {
+            font-size: 12px;
+          }    
+          
+          .search .search-container button {
+            padding: 9px 5px 9px 5px;
+            background: #000;
+            font-size: 11px;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid #efefef;
+            cursor: pointer;
+            color:aliceblue;
+            height: 30px;
+          }
+              .brands {
+                  display: none;
+                  /* float: none; */
+              }
+              
+          .list-image{
+              float: none;
+              text-align: center;
+              width: 100%;
+          }
+              
+          .list-content{
+              float: none;
+              padding: 20px;
+              width: 100%;
+          }
+          .list-button{
+              float: none;  
+              padding: 20px;
+              width: 100%; 
+          }
+          .store {
+              margin-top: 0;
+          }
+          
+          }
     </style>
 </body>
 </html>
