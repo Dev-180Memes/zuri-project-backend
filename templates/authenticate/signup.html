@@ -38,6 +38,7 @@
         </div>
         <div class="headersearch">
           <form class="searchbar" action="/products/search" method="post">
+            {%csrf_token%}
             <input
               class="place"
               type="search"

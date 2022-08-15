@@ -42,6 +42,7 @@
             <h5>Sign into your Account</h5>
             <div class="form-wrapper">
                 <form action="/signin" method="post" class="form">
+                    {%csrf_token%}
                     <label for="" style="font-size: 1em;">Username</label>
                     <input type="username" name="username" id="username" placeholder="Enter your Username" required>
                     <label for="" id="psswrd" style="font-size: 1em;">Password</label>
